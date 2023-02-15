@@ -1,0 +1,415 @@
+/* CSS RESET */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+div pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+figure,
+header,
+nav,
+section,
+article,
+aside,
+footer,
+figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header,
+nav,
+section,
+article,
+aside,
+footer,
+hgroup {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-weight: 400;
+  /* background-color: #fff; */
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "ubuntu", sans-serif;
+  background-color: hsl(180, 21%, 92%);
+  /* background-color: rgba(135, 135, 135, 0.833); */
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul {
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 25px;
+  color: #2a2a2a;
+}
+
+/* Header */
+
+.header {
+  box-sizing: border-box;
+}
+
+.header .bgHeader {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: hsl(180, 29%, 50%);
+}
+
+/* Section List */
+
+.filter {
+  display: flex;
+  /* padding-bottom: 20px; */
+  justify-content: center;
+  align-items: center;
+}
+
+.filter .bgListFilter {
+  position: absolute;
+  display: flex;
+  width: 700px;
+  height: 50px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 2px 2.6px 6.5px rgba(0, 0, 0, 0.053), 8.4px 11px 21.7px rgba(0, 0, 0, 0.077), 36px 47px 97px rgba(0, 0, 0, 0.13);
+  border-radius: 0.2375em;
+}
+
+.filter .bgListFilter {
+  display: flex;
+  align-items: center;
+}
+
+.filter .bgListFilter .filter-btn {
+  background: none;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 1px;
+  font-size: 16px;
+  color: #d3d3d3;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter .bgListFilter .filter-btn::after {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 2px;
+  width: 0;
+  background-color: hsl(180, 8%, 52%);
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter .bgListFilter .filter-btn:hover {
+  color: hsl(180, 29%, 50%);
+}
+
+.filter .bgListFilter .filter-btn:hover::after {
+  width: 100%;
+}
+
+/* active button */
+
+.filter .bgListFilter .active-btn {
+  color: hsl(180, 8%, 52%);
+}
+
+.filter .bgListFilter .active-btn::after {
+  width: 100%;
+}
+
+/* Items */
+
+.items {
+  margin: 50px 0;
+}
+
+.items .bgItems {
+  display: flex;
+  position: relative;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  /* margin-bottom: 30px; */
+  padding-bottom: 30px;
+}
+
+.items .bgItems .card {
+  display: flex;
+  position: relative;
+  width: 700px;
+  height: 100px;
+  background-color: hsl(180, 31%, 95%);
+  box-shadow: 2px 2.6px 6.5px rgba(0, 0, 0, 0.053), 8.4px 11px 21.7px rgba(0, 0, 0, 0.077), 36px 47px 97px rgba(0, 0, 0, 0.13);
+  justify-content: center;
+}
+
+/* SIsi Kiri */
+
+.items .bgItems .card .inner {
+  display: flex;
+  position: relative;
+  padding: 5px;
+  width: 100%;
+}
+
+.items .bgItems .card .inner img {
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.items .bgItems .card .inner .contentCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background-color: #2a2a2a; */
+  left: 20px;
+  margin: 5px 0;
+}
+
+.items .bgItems .card .inner .contentCard .atas,
+.items .bgItems .card .inner .contentCard .tengah {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* background-color: hsl(180, 8%, 52%); */
+  margin-left: 5px;
+}
+
+.items .bgItems .card .inner .contentCard .atas h4 {
+  font-size: 11px;
+  font-weight: 500;
+  margin-right: 20px;
+  margin-left: 5px;
+  text-align: center;
+  color: hsl(180, 29%, 50%);
+  text-transform: uppercase;
+}
+
+.items .bgItems .card .inner .contentCard .atas span {
+  font-size: 10px;
+  /* font-weight: 500; */
+  margin-right: 5px;
+  /* margin-left: 5px; */
+  padding: 5px;
+  text-align: center;
+  color: #ffff;
+  background-color: hsl(180, 29%, 50%);
+  text-transform: uppercase;
+  border-radius: 15px;
+}
+
+.items .bgItems .card .inner .contentCard .atas span:nth-child(3) {
+  background-color: hsl(180, 14%, 20%);
+  border-radius: 30px;
+  padding: 5px;
+  color: #fff;
+}
+
+.items .bgItems .card .inner .contentCard .tengah a {
+  color: #000000;
+  padding-top: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.items .bgItems .card .inner .contentCard .tengah a:hover {
+  color: hsl(180, 29%, 50%);
+}
+
+.items .bgItems .card .inner .contentCard .bawah {
+  position: relative;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+  margin-left: 5px;
+}
+
+.items .bgItems .card .inner .contentCard .bawah span {
+  font-size: 10px;
+  color: #00000067;
+  font-weight: bold;
+}
+
+.items .bgItems .card .inner .contentCard .bawah span:nth-child(1),
+.items .bgItems .card .inner .contentCard .bawah span:nth-child(2),
+.items .bgItems .card .inner .contentCard .bawah span:nth-child(3),
+.items .bgItems .card .inner .contentCard .bawah span:nth-child(4) {
+  padding-right: 10px;
+}
+
+/* Sisi Kanan */
+
+.items .bgItems .card .inner .innerKanan {
+  display: inline-flex;
+  width: 100%;
+  /* background-color: aquamarine; */
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.items .bgItems .card .inner .innerKanan button {
+  display: inline-block;
+  font-size: 10px;
+  background-color: hsla(180, 29%, 50%, 0.187);
+  border: none;
+  border-radius: 7px;
+  text-align: center;
+  color: hsl(180, 32%, 46%);
+  padding: 5px;
+}
+
+.items .bgItems .card .inner .innerKanan button:hover {
+  color: #fff;
+  background-color: hsl(180, 32%, 46%);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 994px) {
+  .filter .bgListFilter {
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    width: 500px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  .filter .bgListFilter .filter-btn {
+    display: inline-flex;
+    /* flex-direction: column; */
+  }
+  .items .bgItems .card .inner .innerKanan {
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .items .bgItems .card .inner .innerKanan button {
+    margin: 10px;
+  }
+  .items .bgItems .card {
+    height: 250px;
+    width: 500px;
+  }
+}
